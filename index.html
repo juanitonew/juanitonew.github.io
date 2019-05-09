@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>proyecto lenguaje de marcas juan alberto muela galdeano</title>
+<link href="css/principal.css" rel="stylesheet" type="text/css">
+<link href="css/evento.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="imagenes/avatar_criscel_restaurante300x300.jpg">
+
+</head>
+
+<body onload="displayResult()">
+<header id="encabezado">
+	<nav>	
+		<div><a href="index.html" title="Página web del Restaurante Criscel"><img src="imagenes/avatar_criscel_restaurante300x300.jpg" id="logo" alt="Logotipo del Restaurante Criscel"></a></div>
+	  <ul id="horizontal">
+			<li><a href="index.html" class="active" title="inicio">
+			<h2>Inicio</h2>
+				</a>
+			</li>
+			<li><a href="html/quienessomos.html" title="quienes somos">
+			<h2>Quienes Somos</h2></a>
+			</li>
+			<li class="dropdown" >
+				<button  class="dropbtn" onclick="myFunction()">
+				Nuestra carta</button>
+					<div id="myDropdown" class="dropdown-content">
+						<a href="html/para_llevar.html">Para llevar</a>
+						<a href="html/para_servir.html">Para Servir en mesa</a>
+						<a href="html/postres_y_sugerencias.html">Sugerencias y Postres</a>
+						
+				</div>
+			</li>
+			<li><a href="html/dondeestamos.html" title="Donde estamos">
+			<h2>Donde estamos</h2></a>
+			</li>
+			<li id="contacto"><a href="html/contacto.html" title="contacto">
+			<h2>Contacto</h2></a>
+			</li>
+		</ul>		
+  </nav>
+</header>
+<aside>
+  <div id="sideNavigation" class="sidenav">
+	<ul class="nav">
+  		<li class="listvert"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()" >&times;</a></li>
+  		<li class="listvert"><a href="index.html">Inicio</a></li>
+  		<li class="listvert"><a href="html/quienessomos.html">Quienes Somos</a></li>
+  		<li class="listvert"><a href="#">Nuestra carta</a>
+		<ul>
+			<li class="listvert"><a href="html/para_llevar.html">Para llevar</a></li>
+			<li class="listvert"><a href="html/para_servir.html">Para servir en mesa</a></li>
+			<li class="listvert"><a href="html/postres_y_sugerencias.html">Sugerencias y postres</a></li>
+		</ul>
+		</li>	 		 
+ 		<li class="listvert"><a href="html/dondeestamos.html">Donde estamos</a></li>
+  		<li class="listvert"><a href="html/contacto.html">Contacto</a></li>
+</ul>
+</div>
+ 
+<nav class="topnav">
+  <a href="#" onclick="openNav()">
+    <svg width="20" height="10" id="icoOpen">
+        <path d="M0,5 30,5" stroke="#000" stroke-width="5"/>
+        <path d="M0,14 30,14" stroke="#000" stroke-width="5"/>
+        <path d="M0,23 30,23" stroke="#000" stroke-width="5"/>
+    </svg>
+  </a>
+</nav>
+ 
+</aside>
+<section>
+	<article class="slide">
+		<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 8</div>
+    <img src="imagenes/fachada.jpg" style="width:100%" alt="1">
+    <div class="text">Pasa dentro</div>
+  </div>
+	<div class="mySlides fade">
+    <div class="numbertext">2 / 8</div>
+    <img src="imagenes/carousel13.jpg" style="width:100%" alt="2">
+    <div class="text">Tu sonrisa</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 8</div>
+    <img src="imagenes/carousel11.jpg" style="width:100%" alt="3">
+    <div class="text">Para los peques</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 8</div>
+    <img src="imagenes/carousel12.jpg" style="width:100%" alt="4">
+    <div class="text">Nuestro interior</div>
+  </div>
+	<div class="mySlides fade">
+    <div class="numbertext">5 / 8</div>
+    <img src="imagenes/carousel14.jpg" style="width:100%" alt="5">
+    <div class="text">Nuestro rincón favorito</div>
+  </div>
+	<div class="mySlides fade">
+    <div class="numbertext">6 / 8</div>
+    <img src="imagenes/carousel16.jpg" style="width:100%" alt="6">
+    <div class="text">Para todos</div>
+  </div>
+	<div class="mySlides fade">
+    <div class="numbertext">7 / 8</div>
+    <img src="imagenes/carousel17.jpg" style="width:100%" alt="7">
+    <div class="text">Con nosotros</div>
+  </div>
+	<div class="mySlides fade">
+    <div class="numbertext">8 / 8</div>
+    <div class="numbertext">8 / 8</div>
+    <img src="imagenes/carousel18.jpg" style="width:100%" alt="8">
+    <div class="text">Que disfrutéis</div>
+  </div>
+</div>
+ <br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+	<span class="dot" onclick="currentSlide(4)"></span>
+	<span class="dot" onclick="currentSlide(5)"></span>
+	<span class="dot" onclick="currentSlide(6)"></span>
+	<span class="dot" onclick="currentSlide(7)"></span>
+	<span class="dot" onclick="currentSlide(8)"></span>
+</div>
+</article>	
+
+	
+	</section>
+<aside>	
+	<div id="eventos"></div>
+</aside>	
+	
+<footer >
+     <ul class="footerg"> 	
+     	<li><a href="html/contacto.html"><h2>Contacto</h2></a></li>
+		<li><a href="html/dondeestamos.html"><h2>Donde Estamos</h2></a></li>
+        <li><a class="social" href="https://es-es.facebook.com/restaurantecriscel/" target="_blank"><h2>En buscanos en redes</h2></a>
+			</li>
+		 <li><a href="https://es-es.facebook.com/restaurantecriscel/" target="_blank"><img src="imagenes/facebook.jpg" alt="siguenos en redes"></a></li>
+      </ul>
+         
+</footer>
+<script type="text/javascript" src="js/slide.js"></script>
+<script type="text/javascript" src="js/botones.js"></script>
+<script type="text/javascript" src="js/nuestromenu.js"></script>
+<script type="text/javascript" src="js/vertical.js"></script>
+	
+<script>
+	
+    /*XSL*/
+    function loadXMLDoc(filename) {
+      if (window.ActiveXObject) {
+        xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+      } else {
+        xhttp = new XMLHttpRequest();
+      }
+      xhttp.open("GET", filename, false);
+      try {
+        xhttp.responseType = "msxml-document"
+      } catch (err) {} // Helping IE11
+      xhttp.send("");
+      return xhttp.responseXML;
+    }
+
+    function displayResult() {
+      xml = loadXMLDoc("./xml/eventos.xml");
+      xsl = loadXMLDoc("./xml/eventos.xsl");
+      // code for IE
+      if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
+        ex = xml.transformNode(xsl);
+        document.getElementById("eventos").innerHTML = ex;
+      }
+      // code for Chrome, Firefox, Opera, etc.
+      else if (document.implementation && document.implementation.createDocument) {
+        xsltProcessor = new XSLTProcessor();
+        xsltProcessor.importStylesheet(xsl);
+        resultDocument = xsltProcessor.transformToFragment(xml, document);
+        document.getElementById("eventos").appendChild(resultDocument);
+      }
+    }
+  </script>
+
+
+</body>
+</html>

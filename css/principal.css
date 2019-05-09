@@ -1,0 +1,370 @@
+/* CSS Document */
+
+html {
+  min-height: 100%;
+  
+}
+
+body {
+	
+	background-repeat:  repeat;
+	background-image: url(../imagenes/fondomadera.jpg);
+}
+
+#encabezado {
+	width: 100%;
+	position: relative;
+	background: url(../imagenes/bg3.jpg) no-repeat;
+	opacity: 0.8;
+	height: 110;
+	border-radius: 10px;
+	z-index: 1;
+	color:#7F695B;	
+}
+
+nav a {
+	text-decoration: none;
+	color:#7F695B;
+}
+nav a:visited {
+	text-decoration: none;
+	color:#6638C5;	
+}
+nav a:hover  {
+	color: #B5AD32;
+	text-decoration: none;
+	
+}
+nav ul{
+	height: 110px;
+}
+
+nav li {
+	height: 40px;
+	text-align: center;
+	display: inline-block;
+	margin-left: 2px;	
+	background-color: #DEBA62;	
+	opacity: 0.95;
+	margin-top: 70px;
+	align-items: center;
+	list-style: none;
+	padding: 0px 5px 0px 5px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	font-size: 1em;
+	font-family: sans-serif;
+	color:#7F695B;
+	
+}
+nav h2{
+	font-size:1em;	
+}
+footer h2{
+	font-size:1em;
+	color: #7F695B;
+	font-family: sans-serif;
+}
+
+#logo {
+	float: left;
+	width: 194px;
+	height: 110px;
+	border-radius:10px 0px 0px 10px;
+	}
+#contacto{
+	background-color:#B5AD32;
+	float: right;
+}
+#contacto a:hover {
+	color: black;
+}
+{box-sizing:border-box}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+-webkit-box-shadow: 0px 0px 19px 32px rgba(184,127,63,1);
+-moz-box-shadow: 0px 0px 19px 32px rgba(184,127,63,1);
+box-shadow: 0px 0px 19px 32px rgba(184,127,63,1);
+	z-index: 0;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+/* Caption text */
+.text {
+  color: #B5AD32;
+  font-size: 40px;
+  padding: 10px 14px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  text-shadow: 2px 2px 0px black; 
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color:  #B5AD32;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color:  #B5AD32;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+.dropbtn {
+	background-color: #DEBA62;
+    color: #7F695B;
+ 	font-size: 1.2em;
+ 	border: none;
+    cursor: pointer;
+	height: 41px;
+	z-index: 1;
+	font-family: sans-serif;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  color: #B5AD32;
+}
+.dropbtn:visited{
+	color:#6638C5;
+}
+
+.show {display: block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.dropdown-content {
+	
+  display: none;
+  position: absolute;
+  background-color: #DEBA62 ;
+  min-width: 160px;
+  overflow:auto;
+  box-shadow:  0px 8px 16px 0px #DEBA62 ;
+  text-align: left;
+  z-index: 1;
+  color:#7F695B;
+	
+}
+	
+.dropdown-content a {
+  color: #7F695B;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+/* The side navigation menu */
+.sidenav {
+    height: auto; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 194px;
+    left: auto;
+    background-color: #DEBA62; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+	opacity: 0.90;
+	border-radius: 30px;
+}
+ 
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #7F695B;
+    display: block;
+    transition: 0.3s;	
+}
+ 
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #B5AD32;
+}
+ 
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 5px;    
+    font-size: 36px;
+    margin-left: 0px;
+	z-index: 1;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    text-align: center;    
+    text-decoration: none;
+    font-size: 30px;
+	width: 50px;
+	height: 50px;
+	z-index: 1;
+}
+ 
+/* Change the color 	 of links on hover */
+.topnav {
+    background-color: #B5AD32;
+    overflow: hidden;
+	width: 50px;
+	height: 50px;
+	position:fixed;
+	border-radius: 10px;
+	z-index: 1;
+}
+.topnav a:hover {
+    background-color: #6638C5;
+    
+}
+
+ 
+.listvert {
+	list-style: none;
+}
+
+
+footer a {
+    color: #7F695B;
+	text-decoration: none;
+}
+.social {
+  color: black;
+}
+
+footer ul{
+  list-style-type: none;
+}
+.footerg{
+  
+	background-color:#D4AD5B;
+	text-align: center;
+    width: 97%;
+	position: relative;
+	opacity: 0.8;
+	height: 70px;
+	border-radius: 10px;
+	bottom: 0;
+	margin-top: 50px;
+	
+}
+
+
+footer li {
+	
+	text-align: center;
+	display: inline-block;	
+	list-style: none;
+	margin-left:50px;
+	margin-top:30px;
+	font-size: 1em;
+	font-family: sans-serif;
+}
+
+footer img {
+	with:25px;
+	height: 25px;
+}
+
+
+
+article {
+	position:relative;
+	display:inline-block;
+	margin-left: 250px;
+	margin-top: 35px;
+	color:#7F695B;
+	font-family: Sans-Serif;
+	font-size: 1.2em;
+	
+}
+section{
+	margin-bottom: 10%px;
+	z-index: 0;
+	position:relative;
+}
+
+h4 {
+	color: #7F695B;
+	text-align: center;
+}
+
+
+.iframe {
+	width: 600px;
+	height: 450px;
+	z-index: 0;
+
+}
+.texto{
+	
+	position: absolute;
+	margin-left: 10%;
+	margin-top:20%;
+	color:#7F695B;
+	background-color:#D4AD5B;
+	text-align: center;
+	padding:10px 5px;
+	border-radius: 10px;
+	opacity: 0.95;
+	z-index:0;
+}
+.whatsapp{
+	position: fixed;
+	top: 20%;
+	left: 50%;
+	z-index:1;
+}

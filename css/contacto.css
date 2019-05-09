@@ -1,0 +1,41 @@
+.con input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: none;
+}
+
+.con  input[type=submit] {
+    background-color: #625252;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.con input[type=email]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+.con  input[type=submit]:hover {
+    background-color: #6638C5;
+}
+
+.con {
+    border-radius: 10px;
+    background-color: #DEBA66;
+    padding: 20px;
+    width: 400px;
+	margin-top: 10px;
+		
+}
+

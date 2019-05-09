@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>proyecto lenguaje de marcas juan alberto muela galdeano</title>
+<link href="../css/principal.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="../imagenes/avatar_criscel_restaurante300x300.jpg">
+</head>
+
+<body>
+<header id="encabezado">
+	<nav>	
+		<div><a href="../index.html" title="Página web del Restaurante Criscel"><img src="../imagenes/avatar_criscel_restaurante300x300.jpg" id="logo" alt="Logotipo del Restaurante Criscel"></a></div>
+	  <ul id="horizontal">
+			<li><a href="../index.html" class="active" title="inicio">
+			<h2>Inicio</h2>
+				</a>
+			</li>
+			<li><a href="quienessomos.html" title="quienes somos">
+			<h2>Quienes Somos</h2></a>
+			</li>
+			<li class="dropdown" >
+				<button  class="dropbtn" onclick="myFunction()">
+				Nuestra carta</button>
+					<div id="myDropdown" class="dropdown-content">
+						<a href="para_llevar.html">Para llevar</a>
+						<a href="para_servir.html">Para servir en mesa</a>
+						<a href="postres_y_sugerencias.html">Sugerencias y postres</a>
+					</div>
+			</li>
+			<li><a href="dondeestamos.html" title="Donde estamos">
+			<h2>Donde estamos</h2></a>
+			</li>
+			<li id="contacto"><a href="contacto.html" title="contacto">
+			<h2>Contacto</h2></a>
+			</li>
+		</ul>		
+  </nav>
+</header>
+<aside>
+  <div id="sideNavigation" class="sidenav">
+	<ul class="nav">
+  		<li class="listvert"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()" >&times;</a></li>
+  		<li class="listvert"><a href="index.html">Inicio</a></li>
+  		<li class="listvert"><a href="html/quienessomos.html">Quienes Somos</a></li>
+  		<li class="listvert"><a href="#">Nuestra carta</a>
+		<ul>
+			<li class="listvert"><a href="para_llevar.html">Para llevar</a></li>
+			<li class="listvert"><a href="para_servir.html">Para servir en mesa</a></li>
+			<li class="listvert"><a href="postres_y_sugerencias.html">Sugerencias y postres</a></li>
+		</ul>
+		</li>	 		 
+ 		<li class="listvert"><a href="html/dondeestamos.html">Donde estamos</a></li>
+  		<li class="listvert"><a href="html/contacto.html">Contacto</a></li>
+</ul>
+</div>
+<nav class="topnav">
+  <a href="#" onclick="openNav()">
+    <svg width="20" height="10" id="icoOpen">
+        <path d="M0,5 30,5" stroke="#000" stroke-width="5"/>
+        <path d="M0,14 30,14" stroke="#000" stroke-width="5"/>
+        <path d="M0,23 30,23" stroke="#000" stroke-width="5"/>
+    </svg>
+  </a>
+</nav>
+ 
+</aside>
+<section>
+	<article id="map">
+		<iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.761895355329!2d-4.068796684601445!3d40.502647979355274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd419f6086ac6395%3A0x168c639e8a1df0bd!2sRestaurante+Criscel!5e0!3m2!1ses!2ses!4v1556555151674!5m2!1ses!2ses" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</article>
+	<article class="whatsapp">
+    <a href="../index.html"><img src="../imagenes/fachada.jpg" width="400px" height="200px" alt="Fachada"/></a></article>
+	<article class="texto">
+	<h4>Para reservas y comida para llevar <br>llama al <strong>918 97 81 08</strong>. <br> <br>Disponemos de una plaza de aparcamiento <br> en la puerta del restaurante.</h4>
+	</article>
+</section>
+	
+<footer >
+     <ul class="footerg"> 	
+     	<li><a href="contacto.html"><h2>Contacto</h2></a></li>
+		<li><a href="dondeestamos.html"><h2>Donde Estamos</h2></a></li>
+        <li><a class="social" href="https://es-es.facebook.com/restaurantecriscel/" target="_blank"><h2>Buscanos en redes</h2></a>
+			</li>
+		 <li><a href="https://es-es.facebook.com/restaurantecriscel/" target="_blank"><img src="../imagenes/facebook.jpg" alt="siguenos en redes"></a></li>
+      </ul>
+         
+</footer>
+	
+<script type="text/javascript" src="../js/nuestromenu.js"></script>
+<script type="text/javascript" src="../js/vertical.js"></script>
+</body>
+</html>

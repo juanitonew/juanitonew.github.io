@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>proyecto lenguaje de marcas juan alberto muela galdeano</title>
+<link href="../css/principal.css" rel="stylesheet" type="text/css">
+<link href="../css/flotante.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="../imagenes/avatar_criscel_restaurante300x300.jpg">
+</head>
+
+<body onload="displayResult(); Postres()">
+<header id="encabezado">
+	<nav>	
+		<div><a href="../index.html" title="Página web del Restaurante Criscel"><img src="../imagenes/avatar_criscel_restaurante300x300.jpg" id="logo" alt="Logotipo del Restaurante Criscel"></a></div>
+	  <ul id="horizontal">
+			<li><a href="../index.html" class="active" title="inicio">
+			<h2>Inicio</h2>
+				</a>
+			</li>
+			<li><a href="quienessomos.html" title="quienes somos">
+			<h2>Quienes Somos</h2></a>
+			</li>
+			<li class="dropdown">
+				<button  class="dropbtn" onclick="myFunction()">
+				Nuestra carta</button>
+					<div id="myDropdown" class="dropdown-content">
+						<a href="para_llevar.html">Para llevar</a>
+						<a href="para_servir.html">Para servir en mesa</a>
+						<a href="postres_y_sugerencias.html">Postres y sugerencias</a>
+						
+				</div>
+			</li>
+			<li><a href="dondeestamos.html" title="Donde estamos">
+			<h2>Donde estamos</h2></a>
+			</li>
+			<li id="contacto"><a href="contacto.html" title="contacto">
+			<h2>Contacto</h2></a>
+			</li>
+		</ul>		
+  </nav>
+</header>
+<aside>
+  <div id="sideNavigation" class="sidenav">
+	<ul class="nav">
+  		<li class="listvert"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()" >&times;</a></li>
+  		<li class="listvert"><a href="../index.html">Inicio</a></li>
+  		<li class="listvert"><a href="quienessomos.html">Quienes Somos</a></li>
+  		<li class="listvert"><a href="#">Nuestra carta</a>
+		<ul>
+			<li class="listvert"><a href="para_llevar.html">Para llevar</a></li>
+			<li class="listvert"><a href="para_servir.html">Para llevar</a></li>
+			<li class="listvert"><a href="postres_y_sugerencias.html">Postres y sugerencias</a></li>
+		</ul>
+		</li>	 		 
+ 		<li class="listvert"><a href="dondeestamos.html">Donde estamos</a></li>
+  		<li class="listvert"><a href="contacto.html">Contacto</a></li>
+</ul>
+</div>
+ 
+<nav class="topnav">
+  <a href="#" onclick="openNav()">
+    <svg width="20" height="10" id="icoOpen">
+        <path d="M0,5 30,5" stroke="#000" stroke-width="5"/>
+        <path d="M0,14 30,14" stroke="#000" stroke-width="5"/>
+        <path d="M0,23 30,23" stroke="#000" stroke-width="5"/>
+    </svg>
+  </a>
+</nav>
+ 
+</aside>
+<section>
+
+	<article>
+		<h4>Sugerencias</h4>
+	<div id="example"></div>	
+
+		<h4>Postres</h4>
+	<div id="example1"></div>
+	
+	</article>
+</section>	
+<footer >
+     <ul class="footerg"> 	
+     	<li><a href="contacto.html"><h2>Contacto</h2></a></li>
+		<li><a href="dondeestamos.html"><h2>Donde Estamos</h2></a></li>
+        <li><a class="social" href="https://es-es.facebook.com/restaurantecriscel/" target="_blank"><h2>En buscanos en redes</h2></a>
+			</li>
+		 <li><a href="https://es-es.facebook.com/restaurantecriscel/" target="_blank"><img src="../imagenes/facebook.jpg" alt="siguenos en redes"></a></li>
+      </ul>
+         
+</footer>
+<script type="text/javascript" src="../js/nuestromenu.js"></script>
+<script type="text/javascript" src="../js/vertical.js"></script>
+
+
+<script>
+	
+    /*XSL*/
+    function loadXMLDoc(filename) {
+      if (window.ActiveXObject) {
+        xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+      } else {
+        xhttp = new XMLHttpRequest();
+      }
+      xhttp.open("GET", filename, false);
+      try {
+        xhttp.responseType = "msxml-document"
+      } catch (err) {} // Helping IE11
+      xhttp.send("");
+      return xhttp.responseXML;
+    }
+
+    function displayResult() {
+      xml = loadXMLDoc("../xml/carta.xml");
+      xsl = loadXMLDoc("../xml/postresysugerencias.xsl");
+      // code for IE
+      if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
+        ex = xml.transformNode(xsl);
+        document.getElementById("example").innerHTML = ex;
+      }
+      // code for Chrome, Firefox, Opera, etc.
+      else if (document.implementation && document.implementation.createDocument) {
+        xsltProcessor = new XSLTProcessor();
+        xsltProcessor.importStylesheet(xsl);
+        resultDocument = xsltProcessor.transformToFragment(xml, document);
+        document.getElementById("example").appendChild(resultDocument);
+      }
+    }
+  </script>
+	<script>
+	
+    /*XSL*/
+    function loadXMLDoc1(filename) {
+      if (window.ActiveXObject) {
+        xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+      } else {
+        xhttp = new XMLHttpRequest();
+      }
+      xhttp.open("GET", filename, false);
+      try {
+        xhttp.responseType = "msxml-document"
+      } catch (err) {} // Helping IE11
+      xhttp.send("");
+      return xhttp.responseXML;
+    }
+
+    function Postres() {
+      xml = loadXMLDoc1("../xml/carta.xml");
+      xsl = loadXMLDoc1("../xml/postres.xsl");
+      // code for IE
+      if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
+        ex = xml.transformNode(xsl);
+        document.getElementById("example1").innerHTML = ex;
+      }
+      // code for Chrome, Firefox, Opera, etc.
+      else if (document.implementation && document.implementation.createDocument) {
+        xsltProcessor = new XSLTProcessor();
+        xsltProcessor.importStylesheet(xsl);
+        resultDocument = xsltProcessor.transformToFragment(xml, document);
+        document.getElementById("example1").appendChild(resultDocument);
+      }
+    }
+  </script>
+
+</body>
+</html>
+	
